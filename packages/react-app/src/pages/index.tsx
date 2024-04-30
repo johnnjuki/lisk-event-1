@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
+import { GetPrice } from "@/components/ui/get-price";
+import { PurchaseNft } from "@/components/ui/purchase";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,15 +27,14 @@ export default function Home() {
       return null;
   }
 
+  if (!isConnected) {
+    return <div>Connect your wallet</div>
+  }
+
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="h1 flex flex-col">
-       <span>Lisk DApp content goes here...</span> 
-       <span>   {isMounted &&(
-          address
-        )}</span>
-      
-      </div>
+    <div className="flex flex-col justify-center items-center gap-5 px-4">
+       <GetPrice />
+       <PurchaseNft />
     </div>
   );
 }

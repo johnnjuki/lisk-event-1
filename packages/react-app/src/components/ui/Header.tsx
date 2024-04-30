@@ -5,10 +5,6 @@ import Image from "next/image";
 
 
 export default function Header() {
-    
-
-   
-
     return (
         <Disclosure as="nav" className="bg-prosperity border-b border-black ">
             {({ open }) => (
