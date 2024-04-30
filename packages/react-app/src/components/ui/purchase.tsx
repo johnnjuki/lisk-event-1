@@ -8,7 +8,7 @@ import { useReadContract, useWaitForTransactionReceipt, useWriteContract } from 
 
 export function PurchaseNft() {
 
-    const contractAddress = '0x21d5E55D4e518d76C4171dFB885BDa076Df8D682'
+    const contractAddress = '0x16B4d20C21d0200CCc35b6082B39b30409B10A1e'
 
     const { data: isAvailable, error: isAvailableError, isPending: isAvailablePending } = useReadContract({
         address: contractAddress,

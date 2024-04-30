@@ -2,7 +2,7 @@ import { type BaseError, useReadContract } from "wagmi";
 import { MockNFTMarketplaceAbi } from "@/blockchain/abi/marketplaceAbi";
 
 export const GetPrice = () => {
-    const contractAdress = '0x8Ca2A1E049D63a08a058fc996F97698Ed54d9242';
+    const contractAdress = '0x16B4d20C21d0200CCc35b6082B39b30409B10A1e';
 
     const {data: price, error, isPending} = useReadContract({
         address: contractAdress,
