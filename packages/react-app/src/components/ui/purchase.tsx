@@ -51,7 +51,7 @@ export function PurchaseNft() {
                 <div className="mt-3">
                 {
                     nftUrls.map((url, index) => (
-                        <div className="flex flex-col space-y-2">
+                        <>
                             <Image className="rounded-md" key={index} src={url} alt="NFT" width={192} height={256} />
                             <button disabled={!isAvailable} type="submit" key={index} className={`bg-blue-500 hover:bg-blue-700 text-white p-2 rounded ${isAvailable ? 'bg-blue-500 hover:bg-blue-700' : 'bg-gray-500 hover:bg-gray-500'}`}
                                 onClick={() => {
@@ -61,7 +61,7 @@ export function PurchaseNft() {
                                 {!isAvailable ? 'Purchased' : 'Purchase'}
 
                             </button>
-                        </div>
+                        </>
 
                     ))
 
