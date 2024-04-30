@@ -47,7 +47,8 @@ export function PurchaseNft() {
             {isConfirmed && <div>Transaction confirmed.</div>}
             {error && <div>Error: {error.message}</div>}
 
-            <div className="grid grid-cols-3 gap-4 gap-y-8 mt-3">
+            {/* <div className="grid grid-cols-3 gap-4 gap-y-8 mt-3"> */}
+                <div className="mt-3">
                 {
                     nftUrls.map((url, index) => (
                         <div className="flex flex-col space-y-2">
